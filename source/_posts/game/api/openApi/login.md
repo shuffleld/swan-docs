@@ -21,7 +21,7 @@ swan.login(opts)
 **参数值：**
 
 |属性|类型|是否必填|描述|
-|-|-|-|-|-|
+|-|-|-|-|
 |force|Boolean|否|未登录时，是否强制调起登录框，默认值为 true|
 |success|function|否|成功回调函数|
 |fail|function|否|失败回调函数|
