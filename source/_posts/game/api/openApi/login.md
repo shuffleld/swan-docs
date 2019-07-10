@@ -22,6 +22,7 @@ swan.login(opts)
 
 |属性|类型|是否必填|描述|
 |-|-|-|-|-|
+|force|Boolean|否|未登录时，是否强制调起登录框，默认值为 true|
 |success|function|否|成功回调函数|
 |fail|function|否|失败回调函数|
 |complete|function|否|接口调用完成的回调函数（接口成功、失败都会执行）|
@@ -33,6 +34,9 @@ swan.login(opts)
 |属性|类型|描述|
 |-|-|-|
 |code|string|用户登录凭证（有效期五分钟）。开发者需要在开发者服务器后台调用 api，使用 code 换取 session_key 等信息|
+
+`force` 参数说明：
+在用户调用 login 接口时不传 force 参数，或者 force 传为 true ,为正常调用 login 逻辑，用户当前为未登录状态会调起登录界面。若force 传 false 时，则用户在未登录状态时不会自动调起登录页。
 
 **示例 1：**
 ```js
